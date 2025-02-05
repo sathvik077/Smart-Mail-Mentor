@@ -1,0 +1,35 @@
+Roles and Responsibilities:
+
+Note: The below roles and responsibilities are written based on our current knowledge however these roles and responsibilities may change as everybody within the team strives to contribute for the project equally and even more by improving the learning rate on subject domain knowledge
+
+1. Sathvik Chowdary Samineni (Team Lead)
+
+Primary Roles and Responsibilities:
+
+- Data fetching and data pre-processing to the tool
+- Integration with Gmail API and DB connectivity (as we move on to next step)
+- Maintain the GitHub up to date by coordinating with the team members
+- Can review and work with other team members code on all the technologies within the project (best of the knowledge/Adaptive learning and helping by debugging and direct things in project/ streamline project
+
+2. Purushotham Kalangi 
+
+Primary performing Tasks:
+
+- Working on NLP tasks tokenization, stopword removal i.e., text processing and insights extraction using python
+- Fine-tune the models as per the requirement
+- Designing front end UI and necessary components with Teck stacks within project
+- Integrating front end with Model
+
+
+3. Rakesh Kuchipudi
+
+Primary performing Tasks:
+
+- Researching and documentation : Compare existing models and shed light on doing things/model efficiency and other factors for novelty
+- Frontend and Backend coding as per the research ( How the research work can add value to the work/Steps and execution)
+- Python Coding to build the model
+
+
+****Footnote*****
+We rotate our daily/project deliverables within ourselves for difficult tasks and everybody participates in refining the tool as we progress into the development phase. Our above roles and responsibilities might vary/fluctuate among ourselves as the project requires equal contribution from the individual ends.
+   

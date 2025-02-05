@@ -1,0 +1,14 @@
+Problem Statement:
+
+Title: Smart Mail Mentor
+
+In today’s fast phase digital world, a billion of emails are generated on a daily basis because of the large volume of emails received by individuals by their respective profession in any sector. As they become crucial, the chance of missing an important messages or mails from the inbox is high since the inbox is flooded with different kinds of emails which come from different individuals i.e., promotional, spam, action awaited mails, requires a follow-up with the deadline.
+Existing mail management tools, lacks the ability to adopt individual user priorities and preferences. Manually organizing emails, extracting key information and events is time consuming.
+Solution:
+In order to address these challenges, we are proposing an AI powered email summarization and organization feature. This feature (extension) uses natural language processing technique to summarize emails within time frame i.e., daily or weekly, monthly. Making ease to identify the deadlines, events and meetings from emails and automatically add them to the calendar (Note: We are currently planning to generate a report that manifest above challenges while adding the events and tasks to the calendar involves subject domain knowledge for the implementation which we aim to tackle).
+Our tool is capable to categorize the prioritize email based on the user preference and past behave.
+
+Hypothesis:
+
+As per the limited knowledge before execution, we comment that our tool could potentially save some time for the user spending time on organizing different emails. In addition it can apparently show the missing deadlines and important tasks (to-do list) with the specific time.
+This can improve the productivity of user and can focus on taking action instantly after generating report within seconds which will save time and efforts to view each and every mail.  

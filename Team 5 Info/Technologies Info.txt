@@ -1,0 +1,22 @@
+Email for Integration:
+Gmail API 
+
+Programming Languages:
+Python
+
+AI:
+NLTK (for tokenization and splitting the text), Scikit-learn, Word2Vec, TextRank /BERTSUM,
+
+IDEs:
+Visual Studio Code
+
+Version Control:
+Git & GitHub
+
+Front End:
+HTML, CSS, JS, React.js
+
+DB/Backend:
+Currently we are not planning to store the report, however we are aiming to store the report in a database
+MySQL : (Relational Data is stored after the tool has organized the mails)
+
