@@ -23,7 +23,7 @@ Display/UI     : Chrome
 
 ## Watch the full demo
 
-~~The video ilustration the tool work flow~~
+~~The video illustration the tool work flow~~
 
 _Note : Upon building the tool, the video is availabile for reference and ease of use_
 
