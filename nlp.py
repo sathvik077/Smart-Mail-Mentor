@@ -1,0 +1,1 @@
+# The core of the project and the file is reposnible to process and extract meaningful information for the project

@@ -1,0 +1,2 @@
+/* The JavaScript file which is responsible in extracting the meaningful information and process them to backend
+Also file is responsible to display the reports or inspect the insights from backend to html page */

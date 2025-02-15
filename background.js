@@ -1,0 +1,1 @@
+/* The file is used to communicate with Gmail API and extract emails */
