@@ -1,4 +1,23 @@
+
 {
-    "purpose": "Configuration File",
-    "_comment": "The object is created for user understanding to define the purpose of file which is configuation file"
-}
+    "manifest_version": 3,
+    "name": "Smart Mail Mentor",
+    "version": "1.0",
+    "permissions": ["identity", "storage", "https://www.googleapis.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "oauth2": {
+      "client_id": "693601175348-fo5r4764em8p7m4sbren1imrblp4ntil.apps.googleusercontent.com",
+      "scopes": ["https://www.googleapis.com/auth/gmail.readonly"]
+    }
+  }
+  
