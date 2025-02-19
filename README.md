@@ -1,5 +1,8 @@
 # ` Smart Mail Mentor `
 
+![Mail Mentor Logo](https://github.com/user-attachments/assets/497ad4c7-78f0-4ed4-ae8a-686cd4b02c2c)
+
+
 ## An emails summarizing tool that creates context-based reports and insights from emails over a set timeframe
 
 In today’s fast phase digital world, a billion of emails are generated on a daily basis because of the large volume of emails received by individuals by their respective profession in any sector. As they become crucial, the chance of missing an important messages or mails from the inbox is high since the inbox is flooded with different kinds of emails which come from different individuals i.e., promotional, spam, action awaited mails, requires a follow-up with the deadline.
