@@ -37,7 +37,9 @@ _Note : Context will be updated upon completion_
 ## Would you be keen to assist/enchance the tool? 
 
 Since this tool can be used on a daily basis with the amount of vast emails generated over time, We'd be delighted to collaborate with you if you're interested. Feel free to reach out to us.
-
+ 
+#Ui/Ux Design Link
+https://www.figma.com/design/gCs3jtFB89wn83Ten4Q7Cq/Gmail-UI-Part-1%3A-Inbox-(Community)?node-id=110-0&t=C1KguB8Je2dbe658-1
 ## Contributers
 
 1. Sathvik Chowdary Samineni (Lead)
