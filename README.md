@@ -19,7 +19,7 @@ Frontend       : HTML, CSS, JS, React.js
 Backend        : Flask/Fast
 API (if required)
 Database       : MySQL
-APIs           : Gmail API
+APIs           : Gmail API, Flask API
 AI             : Natural Language Processing, NLTK (for tokenization and splitting the text), Scikit-learn, Word2Vec, TextRank /BERTSUM
 IDEs           : Visual Studio Code
 Display/UI     : Chrome
