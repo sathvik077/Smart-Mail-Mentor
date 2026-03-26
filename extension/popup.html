@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Mail Mentor</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="header">
+  <div class="header-logo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    <span>Smart Mail Mentor</span>
+  </div>
+  <button id="btn-settings" class="icon-btn" title="Settings" aria-label="Settings">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33
+               1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4
+               a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15
+               a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9
+               a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68
+               a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51
+               a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9
+               a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+</header>
+
+<!-- ── Screens ────────────────────────────────────────────────── -->
+
+<!-- Screen: checking auth -->
+<div id="screen-loading" class="screen">
+  <div class="spinner-wrap">
+    <div class="spinner"></div>
+    <p class="muted">Connecting to backend…</p>
+  </div>
+</div>
+
+<!-- Screen: not authenticated -->
+<div id="screen-auth" class="screen hidden">
+  <div class="auth-card">
+    <div class="auth-icon">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4285f4" stroke-width="1.5">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </div>
+    <h2>Connect Gmail</h2>
+    <p class="muted">Allow Smart Mail Mentor to read your inbox so it can summarize and prioritize your emails.</p>
+    <button id="btn-connect" class="btn-primary full-width">Connect Gmail Account</button>
+    <p class="hint">Make sure the backend is running on <code>localhost:8000</code></p>
+  </div>
+</div>
+
+<!-- Screen: form -->
+<div id="screen-form" class="screen hidden">
+  <div class="form-group">
+    <label class="label">Fetch mode</label>
+    <div class="toggle-group">
+      <button class="toggle-btn active" data-mode="count" id="mode-count">By Count</button>
+      <button class="toggle-btn" data-mode="daterange" id="mode-daterange">Date Range</button>
+    </div>
+  </div>
+
+  <!-- Count mode -->
+  <div id="count-fields" class="form-group">
+    <label class="label" for="email-count">Number of emails</label>
+    <select id="email-count" class="select">
+      <option value="10">Top 10</option>
+      <option value="20">Top 20</option>
+      <option value="30" selected>Top 30</option>
+      <option value="40">Top 40</option>
+    </select>
+  </div>
+
+  <!-- Date range mode -->
+  <div id="daterange-fields" class="form-group hidden">
+    <label class="label">Date range</label>
+    <div class="date-row">
+      <input type="date" id="start-date" class="input-date" placeholder="Start date" />
+      <span class="date-sep">to</span>
+      <input type="date" id="end-date" class="input-date" placeholder="End date" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="label">Show top per category</label>
+    <select id="top-per-cat" class="select">
+      <option value="3">3 emails</option>
+      <option value="5" selected>5 emails</option>
+      <option value="10">10 emails</option>
+    </select>
+  </div>
+
+  <button id="btn-summarize" class="btn-primary full-width">
+    Summarize Emails
+  </button>
+</div>
+
+<!-- Screen: fetching / processing -->
+<div id="screen-fetching" class="screen hidden">
+  <div class="spinner-wrap">
+    <div class="spinner"></div>
+    <p id="fetch-status" class="muted">Fetching emails…</p>
+  </div>
+</div>
+
+<!-- Screen: results -->
+<div id="screen-results" class="screen hidden">
+  <div class="results-meta">
+    <span id="meta-count" class="meta-pill"></span>
+    <span id="meta-time" class="meta-pill"></span>
+    <button id="btn-new-search" class="link-btn">← New search</button>
+  </div>
+  <div id="results-container"></div>
+</div>
+
+<!-- Screen: error -->
+<div id="screen-error" class="screen hidden">
+  <div class="error-card">
+    <p id="error-message" class="error-text"></p>
+    <button id="btn-retry" class="btn-secondary full-width">Try Again</button>
+  </div>
+</div>
+
+<!-- ── Settings panel (overlay) ───────────────────────────────── -->
+<div id="settings-panel" class="panel hidden">
+  <div class="panel-header">
+    <h3>Preferences</h3>
+    <button id="btn-close-settings" class="icon-btn">✕</button>
+  </div>
+  <div class="form-group">
+    <label class="label">Priority keywords (comma-separated)</label>
+    <input type="text" id="pref-keywords" class="input-text"
+           placeholder="urgent, deadline, invoice" />
+  </div>
+  <div class="form-group">
+    <label class="label">Important senders (comma-separated)</label>
+    <input type="text" id="pref-senders" class="input-text"
+           placeholder="boss@company.com, hr@company.com" />
+  </div>
+  <div class="form-group">
+    <label class="label">Important domains (comma-separated)</label>
+    <input type="text" id="pref-domains" class="input-text"
+           placeholder="company.com, client.io" />
+  </div>
+  <button id="btn-save-prefs" class="btn-primary full-width">Save Preferences</button>
+  <p id="prefs-saved-msg" class="hint hidden" style="color:#34a853;text-align:center">Saved!</p>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

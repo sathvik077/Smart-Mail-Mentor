@@ -1,0 +1,27 @@
+# Core API
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+
+# Gmail API
+google-auth==2.29.0
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+google-api-python-client==2.127.0
+
+# NLP / Summarization (always installed)
+scikit-learn==1.4.2
+networkx==3.3
+numpy==1.26.4
+
+# Entity extraction
+python-dateutil==2.9.0
+
+# Environment config
+python-dotenv==1.0.1
+
+# ── Optional: transformer-based summarization ──────────────────────────────
+# Uncomment to enable SUMMARIZER_MODEL=distilbart or SUMMARIZER_MODEL=flan-t5
+# torch==2.3.0          # CPU-only: pip install torch --index-url https://download.pytorch.org/whl/cpu
+# transformers==4.41.0
+# sentencepiece==0.2.0  # required for flan-t5

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.env
+*.egg
+
+# Credentials — never commit these
+backend/credentials/credentials.json
+backend/credentials/token.json
+backend/credentials/.flow_state.json
+
+# User data
+backend/user_preferences.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Transformer model cache (can be large)
+backend/.model_cache/
+~/.cache/huggingface/
